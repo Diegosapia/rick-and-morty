@@ -1,0 +1,31 @@
+.conteinerAbout{
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 100px 100px 100px 0px;
+    width: 100%;
+    height: 100%;
+    box-shadow:  20px 20px 60px #93d2b2;
+    background-color: #8971d0;
+    
+   
+}
+
+.conteinerAbout h1 {
+    font-size: 50px;
+}
+
+.imgAbout {
+    width: 40%;
+    border-radius: 50%;
+    box-shadow:  20px 20px 60px #93d2b2,
+             -20px -20px 60px #c7fff0;
+}
+
+
+@media (min-with:350px) and (max-with:1024px) {
+    .App {
+       background-size: cover;
+       width: 100vw;
+    }
+}

@@ -1,0 +1,49 @@
+.contenedor {
+    gap: 2px;
+    padding: 1em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: #8971d0;
+    box-shadow: 10px 10px 5px 0px #7dace4;
+    margin-bottom: 1em;
+
+}
+
+.button {
+
+    background-color: #95e8d7;
+    color: #050407;
+    border-radius: 10px;
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 6px 6px 12px #7dace4,
+        -6px -6px 12px #7dace4;
+}
+
+.aboutButton {
+
+    color: #090909;
+    padding: 0.5em 1.7em;
+    font-size: 10px;
+    border-radius: 0.5em;
+    background: #95e8d7;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #7dace4,
+        -6px -6px 12px #7dace4;
+}
+
+.aboutButton:active {
+
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+
+}
+
+@media (min-with:350px) and (max-with:1024px) {
+    .App {
+        background-size: cover;
+        width: 100vw;
+    }
+}

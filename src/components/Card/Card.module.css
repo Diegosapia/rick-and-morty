@@ -1,0 +1,63 @@
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  background-color: #8971d0;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px #7dace4;
+  text-shadow: 6px 4px 7px #95e8d7;
+  margin: 20px;
+  width: 15%;
+  height: fit-content;
+}
+.contenedor:hover {
+      box-shadow: -11px 15px 15px 0px #adf7d1;
+-webkit-box-shadow: -11px 15px 15px 0px #adf7d1;
+-moz-box-shadow: -11px 15px 15px 0px #adf7d1;
+}
+
+.closeButton {
+
+  border: 0px;
+  background-color: #adf7d1;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.closeButton:active {
+  color: #f7f4f4;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+        inset -4px -4px 12px #ffffff;
+}
+
+.closeButton:hover {
+
+  box-shadow: 4px 4px 5px 0px rgba(251, 251, 251, 0.6);
+
+}
+
+
+.favoriteButton{
+  display: flex;
+  justify-items: flex-end;
+  background-color: transparent;
+  width:fit-content;
+  margin: 0 auto;
+  
+}
+.notFavoriteButton{
+  display: flex;
+  justify-items: flex-end;
+  background-color: transparent;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media (min-with:3500px) and (max-with:1024px) {
+  .App {
+     background-size: cover;
+     width: 100vw;
+  }
+}

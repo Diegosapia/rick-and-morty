@@ -1,0 +1,14 @@
+.Footer {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: #460df1;
+    text-align: center;
+    margin-top: 15px ;
+    font-size: 25px;
+}
+
+@media (min-with:350px) and (max-with:1024px) {
+    .App {
+       background-size: cover;
+       width: 100vw;
+    }
+}

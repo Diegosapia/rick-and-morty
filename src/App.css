@@ -1,0 +1,18 @@
+.App {
+
+   /* background-image: url(../src/essest/img/rmbackground.jpg);
+   background-size: cover;
+   background-repeat: no-repeat; */
+
+
+
+}
+
+@media (min-with:600px) and (max-with:1024px) {
+   .App {
+      background-size: cover;
+      width: 100vw;
+   }
+}
+
+;
