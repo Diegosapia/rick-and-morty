@@ -1,0 +1,45 @@
+.conteiner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 10px;
+    height: 90vh;
+    background-size: auto;
+    background-repeat: no-repeat;
+
+}
+.selectors {
+    display: flex;
+    align-items: first baseline;
+    
+}
+
+.options {
+    display: flex;
+    background-color: #95e8d7;
+    font-size: 15px;
+    border-radius: 0.5em;
+    background: #95e8d7;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #7dace4,
+        -6px -6px 12px #7dace4;
+}
+
+
+.conteiner img {
+    border: solid #e702f8 6px;
+    border-radius: 100%;
+    box-shadow: 4px 4px 5px 0px #e702f8;
+
+}
+
+@media (min-with:350px) and (max-with:1024px) {
+    .App {
+        background-size: cover;
+        width: 100vw;
+    }
+}
+
+;
