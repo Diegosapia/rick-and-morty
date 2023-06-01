@@ -2,11 +2,14 @@ import { connect, useDispatch } from "react-redux"
 import Card from "../Card/Card";
 import style from '../Favorites/Favorites.module.css'
 import { filterCards, orderCards } from "../../redux/actions";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+ 
+
+const Favorites = ( ) => {
 
 
-const Favorites = ({ myFavorites }) => {
-
+  const myFavorites = useSelector((state) => state.myFavorites);
   const dispatch = useDispatch();
   const [aux, setAux] = useState(false);
 
@@ -18,10 +21,16 @@ const Favorites = ({ myFavorites }) => {
     dispatch(filterCards(event.target.value))
   }
 
+  useEffect(() => {
+    document.body.style.background = 'black'; // Cambia el color del fondo al montar el componente
+    return () => {
+       document.body.style.background = ''; // Restaura el color del fondo al desmontar el componente
+    };
+ }, []);
 
   return (
-        <div className={style.conteiner}>
-          <div className={style.selectors}>
+      <div className={style.conteiner}>
+    <div className={style.selectors}>
     <select className={style.options} onChange={handleOrder}>
         <option value='A'>Ascendente</option>
         <option value='D'>Descendente</option>
@@ -35,7 +44,8 @@ const Favorites = ({ myFavorites }) => {
       </select>
       </div>
 
-      {myFavorites.map(({ id, name, status, gender, origin, species, image, onClose }) => (
+      {myFavorites?.map(({ id, name, status, gender, origin, species, image }) => (
+                
         <Card
           key={id}
           id={id}
@@ -45,17 +55,20 @@ const Favorites = ({ myFavorites }) => {
           gender={gender}
           origin={origin}
           image={image}
-          onClose={onClose}
+          
         />
       ))}
     </div>
   )
 };
 
-const mapStateToProps = (state) => {
-  return {
-    myFavorites: state.myFavorites
-  }
-};
+//const mapStateToProps = (state) => {
+ // return {
+   // myFavorites: state.myFavorites
+  //}
+//};
 
-export default connect(mapStateToProps, null)(Favorites)
+
+export default Favorites;
+
+///export default connect(mapStateToProps, null)(Favorites)

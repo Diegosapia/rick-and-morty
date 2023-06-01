@@ -46,19 +46,19 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
-  function onSearch(id) {
-    axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(({ data }) => {
+  const onSearch = async (id) =>{
+    try {
+     
+      const { data } = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
         if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert("¡No hay personajes con este ID!");
-        }
-      }
-      );
+          setCharacters((oldChars) => [...oldChars, data]); }
+  
+    } catch (error) {
+       alert("¡No hay personajes con este ID!");
+    }
   }
   const onClose = (id) => {
-    setCharacters(characters.filter((char) => char.id !== Number(id)));
+    setCharacters(characters.filter((char) => char.id !== id));
   };
 
   return (

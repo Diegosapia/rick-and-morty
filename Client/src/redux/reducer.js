@@ -21,17 +21,18 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           myFavorites: 
-          action.payload ===  action.payload.allCharacters
+          action.payload ===  'allCharacters'
           ? [...state.allCharacters]
           : filteredAllCharacters,
         };
 
     case ORDER:
-      let allCharactersCopy = [...state.allCharacters];
+      
+      const allCharactersCopy = [...state.myFavorites];
       return {
         ...state,
         myFavorites:
-          action.payload.allCharacters === "A"
+          action.payload === "A"
             ? allCharactersCopy.sort((a, b) => a.id - b.id)
             : allCharactersCopy.sort((a, b) => b.id - a.id),
       };

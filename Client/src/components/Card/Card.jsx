@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 
 
-const Card = ({ id, name, status, gender, origin, onClose, species, image, addToFavorites, removeFromFavorites, myFavorites })=> {
+const Card = ({ id, name, status, gender, origin, onClose, species, image, addToFavorites, removeFromFavorites, myFavorites }) => {
    const [isFav, setIsFav] = useState(false);
 
    const handleFavorite = () => {
@@ -21,7 +21,7 @@ const Card = ({ id, name, status, gender, origin, onClose, species, image, addTo
 
 
    useEffect(() => {
-      myFavorites.forEach((fav) => {
+      myFavorites?.forEach((fav) => {
          if (fav.id === id) {
             setIsFav(true);
          }
@@ -42,9 +42,8 @@ const Card = ({ id, name, status, gender, origin, onClose, species, image, addTo
             )
          }
 
-         <button onClick={() => { onClose(id) }} className={style.closeButton}>
-            X
-         </button>
+
+         {onClose && <button className={style.closeButton} onClick={() => { onClose(id) }}>X</button>}
          <img src={image} alt='' id={style.img} />
          <Link to={`/detail/${id}`}>
             <h2>Name : {name}</h2>
@@ -67,11 +66,8 @@ const mapStateToProps = (state) => ({
 })
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Card)
+export default connect(mapStateToProps, mapDispatchToProps)(Card)
 
 
 
 
-// <Link to={`/detail/${id}`}>
-// <h3 className='card-name'>{name}</h3>
-// </Link>

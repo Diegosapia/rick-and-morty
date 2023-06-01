@@ -15,10 +15,8 @@ function Cards({ characters, onClose }) {
 
   return (
     <div className={style.cardsContenedor}>
-      {
-        characters.map(({ id, name, status, gender, origin, species, image }) => {
-          return (
-            <Card
+      {characters?.map(({ id, name, status, gender, origin, species, image }) => (
+          <Card
               key={id}
               id={id}
               name={name}
@@ -28,11 +26,10 @@ function Cards({ characters, onClose }) {
               image={image}
               origin={origin.name}
               onClose={onClose}
-            />
-          )
-        })
-      }
+            />       
+      ))}
+      
     </div>
-  )
+  );
 }
 export default Cards;
