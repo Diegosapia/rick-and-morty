@@ -22,8 +22,9 @@ server.use((req, res, next) => {
 
 server.use('/rickandmorty', router);
 
-conn.sync({force : true})
 
-server.listen(PORT, () => {
+
+server.listen(PORT, async () => {
   console.log(`Server raised in port:  + ${PORT}`);
+  await conn.sync({force : true});
 });
