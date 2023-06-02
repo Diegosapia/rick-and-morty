@@ -22,11 +22,11 @@ const Card = ({ id, name, status, gender, origin, onClose, species, image, addTo
 
    useEffect(() => {
       myFavorites?.forEach((fav) => {
-         if (fav.id === id) {
+         if (fav.id === Number(id)) {
             setIsFav(true);
          }
       });
-   }, [myFavorites, id]);
+   }, [myFavorites,id]);
 
    return (
       <div className={style.contenedor}>
