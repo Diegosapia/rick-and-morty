@@ -1,4 +1,4 @@
-import { connect, useDispatch } from "react-redux"
+import {  useDispatch } from "react-redux"
 import Card from "../Card/Card";
 import style from '../Favorites/Favorites.module.css'
 import { filterCards, orderCards } from "../../redux/actions";
@@ -21,11 +21,11 @@ const Favorites = ( ) => {
     dispatch(filterCards(event.target.value))
   }
 
-  useEffect(() => {
+   useEffect(() => {
     document.body.style.background = 'black'; // Cambia el color del fondo al montar el componente
-    return () => {
-       document.body.style.background = ''; // Restaura el color del fondo al desmontar el componente
-    };
+     return () => {
+        document.body.style.background = ''; // Restaura el color del fondo al desmontar el componente
+     };
  }, []);
 
   return (
