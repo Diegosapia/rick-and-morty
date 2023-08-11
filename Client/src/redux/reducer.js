@@ -8,8 +8,8 @@ export const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAV:
+      console.log(action.payload)
       return { ...state, myFavorites: action.payload, allCharacters: action.payload };
-
 
       case REMOVE_FAV:
         return { ...state, myFavorites: action.payload, 
@@ -27,6 +27,7 @@ const reducer = (state = initialState, action) => {
         };
 
     case ORDER:
+      
       
       const allCharactersCopy = [...state.myFavorites];
       return {
