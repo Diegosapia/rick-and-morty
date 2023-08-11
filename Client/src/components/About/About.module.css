@@ -21,6 +21,13 @@
     box-shadow:  20px 20px 60px #93d2b2,
              -20px -20px 60px #c7fff0;
 }
+
+
+.parra {
+display: flex;
+}
+
+
 .p {
     color: white; /* Cambiamos el color del texto a blanco */
     text-align: center; /* Centramos el texto horizontalmente */
