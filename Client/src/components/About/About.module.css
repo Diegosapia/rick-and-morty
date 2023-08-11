@@ -21,7 +21,11 @@
     box-shadow:  20px 20px 60px #93d2b2,
              -20px -20px 60px #c7fff0;
 }
-
+.p {
+    color: white; /* Cambiamos el color del texto a blanco */
+    text-align: center; /* Centramos el texto horizontalmente */
+    margin: 0;
+}
 
 @media (min-with:350px) and (max-with:1024px) {
     .App {
