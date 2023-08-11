@@ -2,12 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 300px;
-    
     border: 5px solid #95e8d7;
-    margin: 0 auto;
+    margin: 10vh auto;
     background-color: black;
     height: 70vh;
+    transition: margin 0.3s, box-shadow 0.3s;
+    position: relative;
+    z-index: 1; /* Ajustamos el índice Z para asegurarnos de que el contenedor esté en frente de la imagen */
 }
 .conteinerForm:hover {
 
@@ -21,6 +24,7 @@
     flex-direction: column; 
     justify-content: center; 
     align-items: center;
+    
     
 }
 
