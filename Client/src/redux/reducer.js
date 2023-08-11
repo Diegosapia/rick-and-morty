@@ -8,7 +8,7 @@ export const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAV:
-      console.log(action.payload)
+     
       return { ...state, myFavorites: action.payload, allCharacters: action.payload };
 
       case REMOVE_FAV:
