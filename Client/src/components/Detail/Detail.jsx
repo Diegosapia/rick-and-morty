@@ -11,7 +11,7 @@ const Detail = () => {
    const [character, setCharacter] = useState({})
 
    useEffect(() => {
-      axios(`https://rick-and-morty-delta-five.vercel.app/rickandmorty/character/${id}`).then(({ data }) => {
+      axios(`https://rick-and-morty-ti4e.onrender.com/rickandmorty/character/${id}`).then(({ data }) => {
          if (data.name) {
             setCharacter(data);
          } else {

@@ -25,7 +25,7 @@ function App() {
 
   const login = async (userData) => {
     const { email, password } = userData;
-    const URL = 'https://rick-and-morty-delta-five.vercel.app/rickandmorty/login';
+    const URL = 'https://rick-and-morty-ti4e.onrender.com/rickandmorty/login';
     
     try {
       const response = await axios.get(URL, { params: { email, password } });
@@ -49,7 +49,7 @@ function App() {
   const onSearch = async (id) =>{
     try {
      
-      const { data } = await axios.get(`https://rick-and-morty-delta-five.vercel.app/rickandmorty/character/${id}`)
+      const { data } = await axios.get(`https://rick-and-morty-ti4e.onrender.com/rickandmorty/character/${id}`)
         if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]); }
   
