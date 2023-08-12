@@ -9,7 +9,7 @@ const Favoritemodel = require("./models/Favorite");
 const Usermodel = require("./models/User");
 
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
-const sequelize = new Sequelize("postgres://rick_and_morty_29mz_user:QO6AsvNxAwetnplPJOfuCRgBQeJKMxUW@dpg-cjb85i2nip6c73df2obg-a.oregon-postgres.render.com/rick_and_morty_29mz", {
+const sequelize = new Sequelize(`${DB_URL}`, {
   logging: false,
   native: false,
   dialect: "postgres", // Específico del dialecto PostgreSQL
