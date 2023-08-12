@@ -11,7 +11,7 @@ server.use(cors())
 server.use(morgan('dev'));
 
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://rick-and-morty-delta-five.vercel.app/");
+  res.header("Access-Control-Allow-Origin", "https://rick-and-morty-delta-five.vercel.app");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept"
   );
