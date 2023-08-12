@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 export const addFav = (character) => {
-  const endpoint = '/rickandmorty/fav';
+  const endpoint = 'https://rick-and-morty-ti4e.onrender.com/rickandmorty/fav';
   return async (dispatch) => {
     try {
       const { data } = await axios.post(endpoint, character);
@@ -18,7 +18,7 @@ export const addFav = (character) => {
 };
 
 export const removeFav = (id) => {
-  const endpoint = '/rickandmorty/fav/' + id;
+  const endpoint = 'https://rick-and-morty-ti4e.onrender.com/rickandmorty/fav/' + id;
   return async (dispatch) => {
     try {
       const { data } = await axios.delete(endpoint);
