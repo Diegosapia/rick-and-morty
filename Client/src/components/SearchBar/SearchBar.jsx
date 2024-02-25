@@ -16,14 +16,14 @@ function SearchBar({ onSearch }) {
          <input
             value={id}
             onChange={handleChange}
-            placeholder='   Busca tu Personaje'
+            placeholder=' Search   '
             className={style.searchInput}
             type='search'>
          </input>
          <button
             onClick={() => onSearch(id)}
             className={style.searchButton}>
-            Agregar
+            ADD
          </button>
       </div>
    );

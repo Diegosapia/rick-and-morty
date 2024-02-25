@@ -10,8 +10,8 @@ const Nav = ({ onSearch }) => {
     };
     
     return (
-        <div className={style.contenedor}>
-            <SearchBar onSearch={onSearch} />
+        <section className={style.contenedor}>
+            <div className={style.buttons}>
             <NavLink to='/about'>
                 <button className={style.aboutButton}>ABOUT</button>
             </NavLink>
@@ -21,8 +21,12 @@ const Nav = ({ onSearch }) => {
             <NavLink to='/favorites' >
                 <button className={style.aboutButton}>FAVORITES</button>
             </NavLink>
+            </div>
 
-        </div>
+            <aside className={style.searchbar}>
+            <SearchBar onSearch={onSearch} />
+            </aside>
+        </section>
     )
 };
 
