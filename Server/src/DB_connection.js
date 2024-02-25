@@ -14,10 +14,7 @@ const sequelize = new Sequelize(`${DB_URL}`, {
   native: false,
   dialect: "postgres", // Específico del dialecto PostgreSQL
   dialectOptions: {
-    ssl: {
-      require: true, // Requerir SSL/TLS
-      rejectUnauthorized: false // Opcionalmente, podrías configurar el rechazo de certificados no autorizados
-    }
+    ssl: false, //
   }
 });
 

@@ -1,18 +1,41 @@
 .App {
-
-   /* background-image: url(../src/essest/img/rmbackground.jpg);
-   background-size: cover;
-   background-repeat: no-repeat; */
-
-
-
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../src/essest/img/rmbackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-@media (min-with:600px) and (max-with:1024px) {
-   .App {
-      background-size: cover;
-      width: 100vw;
-   }
+@media (max-width: 768px) {
+    .App {
+        background-position-x: center;
+        background-size: cover;
+        height: 100%;
+    }
 }
 
-;
+/* Estilos para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .App {
+        background-position-x: center;
+        background-size: cover;
+        height: 100%;
+
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    .App {
+        background-position-x: center;
+        background-size: cover;
+        height: 100%;
+
+    }
+}

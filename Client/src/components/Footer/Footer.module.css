@@ -1,14 +1,51 @@
 .Footer {
     font-family:Georgia, 'Times New Roman', Times, serif ;
-    color: #460df1;
+    color: grey;
     text-align: center;
     margin-top: 15px ;
-    font-size: 25px;
+    font-size: 13px;
+    
 }
 
-@media (min-with:350px) and (max-with:1024px) {
-    .App {
-       background-size: cover;
-       width: 100vw;
+    .actions h3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        color: grey;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .actions span {
+            color: black;
+            width: 25%; 
+        }
+    .actions button {
+        border: none;
+        background-color: transparent;
+        font-size: 0.8em;
+    }
+    
+
+@media (max-width: 767px) {
+    .Footer {
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Footer{
+        
+        font-size: 13px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    .Footer {
+        font-size: 13px;
+
     }
 }
