@@ -5,16 +5,20 @@
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    width: 100%;
-    height: 100vh;
+   
     background-image: url(../src/essest/img/rmbackground.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+     width: 100%;
+     height: 100%;
+     overflow: auto;
+
+
+    
 }
 
 @media (max-width: 768px) {
     .App {
         background-position-x: center;
+        background-position-y: center;
         background-size: cover;
         height: 100%;
     }
@@ -24,6 +28,7 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     .App {
         background-position-x: center;
+        background-position-y: center;
         background-size: cover;
         height: 100%;
 
@@ -34,6 +39,7 @@
 @media (min-width: 1025px) {
     .App {
         background-position-x: center;
+        background-position-y: center;
         background-size: cover;
         height: 100%;
 

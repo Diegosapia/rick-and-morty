@@ -8,13 +8,14 @@ import Favorites from './components/Favorites/Favorites'
 import './App.css'
 import axios from "axios";
 import { useState } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import {Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 
 
 
 
 function App() {
+
   const location = useLocation();
   const [characters, setCharacters] = useState([]);
   const navigate = useNavigate();
@@ -37,18 +38,20 @@ function App() {
     }
   };
 
+
   const onSearch = async (id) =>{
     try {
       const { data } = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
       if (data.name) {
           setCharacters((oldChars) => [...oldChars, data]); }
     } catch (error) {
-       alert("¡No hay personajes con este ID!");
+       alert(error.response.data);
     }
   }
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
+  
   return (
     <div className="App">
       {location.pathname !== "/" ? <Nav onSearch={onSearch} /> : null}
@@ -57,7 +60,7 @@ function App() {
         <Route path="/home"element={<Cards characters={characters} onClose={onClose} />} />
         <Route path="/favorites" onClose={onClose} element={<Favorites />} />
         <Route path="/about" element={<About />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path="/detail/:id" element={<Detail  characters={characters}/>} />
       </Routes>
     </div>
   );
