@@ -2,9 +2,6 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME,DB_URL } = process.env;
 
-// EJERCICIO 03
-// A la instancia de Sequelize le falta la URL de conexión. ¡Agrégala!
-// Recuerda pasarle la información de tu archivo '.env'.
 const Favoritemodel = require("./models/Favorite");
 const Usermodel = require("./models/User");
 
@@ -14,20 +11,14 @@ const sequelize = new Sequelize(`${DB_URL}`, {
   native: false,
   dialect: "postgres", // Específico del dialecto PostgreSQL
   dialectOptions: {
-    ssl: false, //
+    ssl: false, 
   }
 });
 
-// EJERCICIO 05
-// Debajo de este comentario puedes ejecutar la función de los modelos.
 
-//
 Favoritemodel(sequelize);
 Usermodel(sequelize);
-//
 
-// Ejercicio 06
-// ¡Relaciona tus modelos aquí abajo!
 const { User, Favorite } = sequelize.models;
 User.belongsToMany(Favorite, { through: "user_favorite" });
 Favorite.belongsToMany(User, { through: "user_favorite" });
