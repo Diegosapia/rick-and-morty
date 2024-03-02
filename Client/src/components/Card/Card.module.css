@@ -2,26 +2,25 @@
 .contenedor {
   display: flex;
   flex-direction: column;
-  background-color: #8971d0;
+  background-color: #f8f7f9;
   padding: 1em;
   border-radius: 10px;
+  text-align: center;
   font-size: 10px;
-  box-shadow: 10px 10px 5px 0px #7dace4;
-  text-shadow: 6px 4px 7px #95e8d7;
+  box-shadow: 5px 5px 5px 1px #7dace4;
   margin: 20px;
   width: 15%;
   height: fit-content;
 }
-.contenedor:hover {
-      box-shadow: -11px 15px 15px 0px #adf7d1;
--webkit-box-shadow: -11px 15px 15px 0px #adf7d1;
--moz-box-shadow: -11px 15px 15px 0px #adf7d1;
+.contenedor a {
+  text-decoration: none;
+  color: rgb(61, 190, 200) ;
+  
+  
 }
 
 .closeButton {
-
   border: 0px;
-  background-color: #adf7d1;
   width: fit-content;
   height: fit-content;
   border-radius: 15px;
@@ -32,33 +31,75 @@
     box-shadow: inset 4px 4px 12px #c5c5c5,
         inset -4px -4px 12px #ffffff;
 }
-
-.closeButton:hover {
-
-  box-shadow: 4px 4px 5px 0px rgba(251, 251, 251, 0.6);
-
-}
-
-
-.favoriteButton{
+.icons{
   display: flex;
-  justify-items: flex-end;
-  background-color: transparent;
-  width:fit-content;
-  margin: 0 auto;
-  
+  justify-content: space-between;
 }
+.favoriteButton{
+  
+  display: flex;
+  justify-content: center;
+  background-color: none;
+  border: none;
+  border-radius: 100px;
+}
+
 .notFavoriteButton{
   display: flex;
-  justify-items: flex-end;
-  background-color: transparent;
-  width: fit-content;
-  margin: 0 auto;
+  justify-content: center;
+  background-color: rgb(233, 10, 10);
+  border: none;
+  border-radius: 100px;
 }
 
-@media (min-with:3500px) and (max-with:1024px) {
-  .App {
-     background-size: cover;
-     width: 100vw;
+
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f7f9;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 10px;
+    box-shadow: 5px 5px 5px 1px #7dace4;
+    margin: 20px;
+    width: 120px;
+    min-width: 90px;
+    height: fit-content;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f7f9;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 10px;
+    box-shadow: 5px 5px 5px 1px #7dace4;
+    margin: 20px;
+    width: 160px;
+    min-width: 150px;
+    height: fit-content;
+  }
+}
+
+
+@media (min-width: 1025px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f7f9;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 10px;
+    box-shadow: 5px 5px 5px 1px #7dace4;
+    margin: 20px;
+    width: 190px;
+    min-width: 170px;
+    height: fit-content;
   }
 }
