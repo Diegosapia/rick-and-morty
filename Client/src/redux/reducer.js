@@ -3,17 +3,25 @@ import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./types";
 export const initialState = {
   myFavorites: [],
   allCharacters:[],
+  
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_FAV:
-     
-      return { ...state, myFavorites: action.payload, allCharacters: action.payload };
+      return {
+           ...state,
+            myFavorites: action.payload, 
+            allCharacters: action.payload 
+          };
 
-      case REMOVE_FAV:
-        return { ...state, myFavorites: action.payload, 
-                        allCharacters: action.payload};
+        case REMOVE_FAV: 
+        // eslint-disable-next-line no-case-declarations
+        const filter2 = state.myFavorites.filter((user) => user.id !== action.id)   
+            return {
+                 ...state, 
+                 myFavorites: filter2,
+                 allCharacters: action.payload };
 
       case FILTER:
         // eslint-disable-next-line no-case-declarations
@@ -29,6 +37,7 @@ const reducer = (state = initialState, action) => {
     case ORDER:
       
       
+      // eslint-disable-next-line no-case-declarations
       const allCharactersCopy = [...state.myFavorites];
       return {
         ...state,
