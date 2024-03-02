@@ -2,6 +2,7 @@ import style from './Nav.module.css'
 import SearchBar from '../SearchBar/SearchBar'
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import logo from '../../essest/img/logoNav.svg';
 
 const Nav = ({ onSearch }) => {
     
@@ -22,7 +23,7 @@ const Nav = ({ onSearch }) => {
                 <button className={style.aboutButton}>FAVORITES</button>
             </NavLink>
             </div>
-
+        <img src={logo} alt='logo Rick & Morty' />
             <aside className={style.searchbar}>
             <SearchBar onSearch={onSearch} />
             </aside>
