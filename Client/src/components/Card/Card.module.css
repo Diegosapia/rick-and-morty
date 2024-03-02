@@ -15,8 +15,6 @@
 .contenedor a {
   text-decoration: none;
   color: rgb(61, 190, 200) ;
-  
-  
 }
 
 .closeButton {
@@ -26,17 +24,19 @@
   border-radius: 15px;
   transition: 0.5s;
 }
+
 .closeButton:active {
   color: #f7f4f4;
     box-shadow: inset 4px 4px 12px #c5c5c5,
         inset -4px -4px 12px #ffffff;
 }
+
 .icons{
   display: flex;
   justify-content: space-between;
 }
+
 .favoriteButton{
-  
   display: flex;
   justify-content: center;
   background-color: none;
@@ -53,8 +53,6 @@
 }
 
 
-
-/* Estilos para pantallas pequeñas */
 @media (max-width: 767px) {
   .contenedor {
     display: flex;
