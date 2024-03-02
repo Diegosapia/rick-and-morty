@@ -79,11 +79,6 @@
     -6px -6px 12px #f0f0f0;
 }
 
-.submitButton:active {
-    /* color: #666;
-    box-shadow: inset 4px 4px 12px #c5c5c5,
-        inset -4px -4px 12px #ffffff; */
-}
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 767px) {

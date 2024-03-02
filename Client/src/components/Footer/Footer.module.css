@@ -4,7 +4,7 @@
     text-align: center;
     margin-top: 15px ;
     font-size: 13px;
-    
+    height: 80px;
 }
 
     .actions h3 {
@@ -31,6 +31,7 @@
     .Footer {
         text-align: center;
         font-size: 13px;
+        height: 80px
     }
 }
 
