@@ -6,12 +6,12 @@ import style from './Detail.module.css';
 const Detail = () => {
    const { id } = useParams();
    const [character, setCharacter] = useState(null);
-   console.log(id);
+   
    useEffect(() => {
       const fetchData = async () => {
          try {
             const {data} = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`);
-            console.log("data",data);
+            
             if (data) {
 
                setCharacter(data);
