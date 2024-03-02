@@ -3,8 +3,11 @@ import SearchBar from '../SearchBar/SearchBar'
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import logo from '../../essest/img/logoNav.svg';
+import { useLocation } from 'react-router-dom';
+import {navUrl}  from './navPath.js';
 
 const Nav = ({ onSearch }) => {
+    const location = useLocation();
     
     Nav.propTypes = {
         onSearch: PropTypes.array.isRequired,
@@ -13,19 +16,20 @@ const Nav = ({ onSearch }) => {
     return (
         <section className={style.contenedor}>
             <div className={style.buttons}>
-            <NavLink to='/about'>
-                <button className={style.aboutButton}>ABOUT</button>
-            </NavLink>
-            <NavLink to='/home' >
-                <button className={style.aboutButton}>HOME</button>
-            </NavLink>
-            <NavLink to='/favorites' >
-                <button className={style.aboutButton}>FAVORITES</button>
-            </NavLink>
+                {navUrl.map((navItem) => {
+                    if (navItem.path !== location.pathname) {
+                        return (
+                            <NavLink key={navItem.name} to={navItem.path}>
+                                <button className={style.aboutButton}>{navItem.name.toUpperCase()}</button>
+                            </NavLink>
+                        );
+                    }
+                    return null;
+                })}
             </div>
-        <img src={logo} alt='logo Rick & Morty' />
+            <img src={logo} alt='logo Rick & Morty' />
             <aside className={style.searchbar}>
-            <SearchBar onSearch={onSearch} />
+                <SearchBar onSearch={onSearch} />
             </aside>
         </section>
     )
