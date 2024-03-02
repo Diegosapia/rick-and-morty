@@ -1,18 +1,20 @@
 .conteinerDetails {
-   
     text-align: center;
     justify-items: center;
-    background-color: #adf7d1;
     width: 30%;
-    color: #8971d0;
-    
     margin: 0 auto;
-    border: solid ;
-    box-shadow: -20px 20px 60px #8971d0,
-        20px -20px 60px #8971d0;
-    height: fit-content;
+    height: 100vh;
 }
 
+.char {
+    background-color: #adf7d1;
+    border-radius: 30px;
+    box-shadow: -20px 20px 60px #8971d0,
+    20px -20px 60px #8971d0;
+    border: solid ;
+    margin: 50px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
+}
 
 .conteinerDetails img  {
     width: 50%;
@@ -24,15 +26,15 @@
 
 .homeButton {
     margin: 10px;
-    color: #090909;
+    color: #ffffff;
     padding: 0.5em 1.7em;
-    font-size: 10px;
+    font-size: 15px;
+    font-weight: 800px;
     border-radius: 0.5em;
     background: #8971d0;
-    border: 1px solid #e8e8e8;
-    transition: all .3s;
-    box-shadow: 6px 6px 12px #7dace4,
-        -6px -6px 12px #7dace4;
+    border: 2px solid #e8e8e8;
+    
+  
         
 }
 
@@ -46,9 +48,24 @@
 
 }
 
-@media (min-with:350px) and (max-with:1024px) {
-    .App {
-        background-size: cover;
-        width: 100vw;
+
+@media (max-width: 767px) {
+    .char {
+        font-size: 10px;
     }
-}
+    .homeButton {
+       
+        font-size: 10px;
+      
+            
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+  }
+  
+  
+  @media (min-width: 1025px) {
+   
+  }

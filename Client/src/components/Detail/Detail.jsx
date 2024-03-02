@@ -27,7 +27,9 @@ const Detail = () => {
 
 
    return (
-      <div className={style.conteinerDetails}>
+      <section className={style.conteinerDetails}>
+         <div className={style.char}>
+
          {character && (
             <>
                <img src={character.image} alt={character.name} />
@@ -41,7 +43,8 @@ const Detail = () => {
          <NavLink to='/home'>
             <button className={style.homeButton}>Home</button>
          </NavLink>
-      </div>
+         </div>
+      </section>
    );
 };
 
