@@ -39,7 +39,7 @@
 .favoriteButton{
   display: flex;
   justify-content: center;
-  background-color: none;
+  background-color: rgb(34, 32, 32);
   border: none;
   border-radius: 100px;
 }
@@ -47,7 +47,7 @@
 .notFavoriteButton{
   display: flex;
   justify-content: center;
-  background-color: rgb(233, 10, 10);
+  ;
   border: none;
   border-radius: 100px;
 }
