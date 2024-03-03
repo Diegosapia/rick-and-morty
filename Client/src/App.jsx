@@ -38,14 +38,20 @@ function App() {
 
   const onSearch = async (id) => {
     try {
-      const { data } = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
-      if (data.name) {
-        setCharacters((oldChars) => [...oldChars, data]);
-      }
+        const { data } = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
+        if (data.name) {
+            const characterExists = characters.some(character => character.id === data.id);
+            if (!characterExists) {
+                setCharacters(oldChars => [...oldChars, data]);
+            } else {
+
+                alert('Character with the same ID already exists');
+            }
+        }
     } catch (error) {
-      alert(error.response.data);
+        alert(error.response.data);
     }
-  }
+}
   const onClose = (id) => {
     setCharacters(characters.filter((char) => char.id !== id));
   };
