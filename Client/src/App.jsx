@@ -7,7 +7,7 @@ import Detail from "./components/Detail/Detail";
 import Favorites from './components/Favorites/Favorites'
 import './App.css'
 import axios from "axios";
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://rick-and-morty-production-0275.up.railway.app/';
 import { useEffect, useState } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 const URL = '/rickandmorty/login';
