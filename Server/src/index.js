@@ -1,7 +1,7 @@
 const express = require("express");
 const server = express();
 const router = require("./routes/index");
-const PORT = 3001;
+const { PORT } = process.env;
 const morgan = require("morgan");
 const { conn } = require("./DB_connection");
 const cors = require("cors");
@@ -11,7 +11,7 @@ server.use(cors());
 server.use(morgan("dev"));
 
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.header("Access-Control-Allow-Origin", "https://rick-and-morty-diegosapia.vercel.app");
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",
