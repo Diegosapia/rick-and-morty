@@ -17,20 +17,28 @@
 
 @media (max-width: 768px) {
     .App {
+        background-image: url(../src/essest/img/rmbackground.jpg);
+        width: 100%;
+        height: 100%;
+        overflow: auto;
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 100%;
+        
     }
 }
 
 /* Estilos para pantallas medianas */
 @media (min-width: 769px) and (max-width: 1024px) {
     .App {
+        background-image: url(../src/essest/img/rmbackground.jpg);
+        width: 100%;
+        height: 100%;
+        overflow: auto;
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 100%;
+        
 
     }
 }
@@ -38,10 +46,14 @@
 /* Estilos para pantallas grandes */
 @media (min-width: 1025px) {
     .App {
+        background-image: url(../src/essest/img/rmbackground.jpg);
+        width: 100%;
+        height: 100%;
+        overflow: auto;
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
-        height: 100%;
+      
 
     }
 }
