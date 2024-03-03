@@ -7,9 +7,10 @@ import Detail from "./components/Detail/Detail";
 import Favorites from './components/Favorites/Favorites'
 import './App.css'
 import axios from "axios";
+axios.defaults.baseURL = 'http://localhost:3001/';
 import { useEffect, useState } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-const URL = 'http://localhost:3001/rickandmorty/login';
+const URL = '/rickandmorty/login';
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
 
   const onSearch = async (id) => {
     try {
-        const { data } = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
+        const { data } = await axios.get(`/rickandmorty/character/${id}`)
         if (data.name) {
             const characterExists = characters.some(character => character.id === data.id);
             if (!characterExists) {

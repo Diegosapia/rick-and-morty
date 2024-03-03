@@ -10,7 +10,7 @@ const Detail = () => {
    useEffect(() => {
       const fetchData = async () => {
          try {
-            const {data} = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`);
+            const {data} = await axios.get(`/rickandmorty/character/${id}`);
             
             if (data) {
 
