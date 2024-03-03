@@ -20,12 +20,10 @@ export const addFav = (character) => {
 };
 
 export const removeFav = (id) => {
-  console.log(id)
   return async (dispatch) => {
     const endpoint = `/rickandmorty/fav/${id}`;
     try {
       const { data } = await axios.delete(endpoint);
-      console.log(data);
       return dispatch({
         type: REMOVE_FAV,
         payload: data,

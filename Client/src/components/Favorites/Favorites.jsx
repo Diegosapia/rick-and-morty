@@ -10,7 +10,7 @@ const Favorites = () => {
 
 
   const myFavorites = useSelector((state) => state.myFavorites) || [];
-  console.log(myFavorites)
+
   const dispatch = useDispatch();
   const [aux, setAux] = useState(false);
 
