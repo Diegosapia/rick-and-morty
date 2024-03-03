@@ -33,7 +33,7 @@ function App() {
     }
   };
   useEffect(() => {
-    !access && navigate('https://rick-and-morty-production-0275.up.railway.app/');
+    !access && navigate('/');
   }, [access]);
 
 
